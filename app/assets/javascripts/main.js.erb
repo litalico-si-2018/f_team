@@ -6,8 +6,6 @@ function submit(){
     if (correct[index] != answer) {
       $(elements).addClass('miss');
       count_flag++;
-    }else{
-      $(elements).addClass('ok');
     }
     if (count_flag > 0 && count_flag < 4) {
       $(elements).addClass('moya');
@@ -20,7 +18,11 @@ function submit(){
 }
 $(document).ready(function(){
   $(document).on('click','.moya', function(){
-    $(this).children(".moya_img").remove();
+    var ok_or_not = $(this).hasClass('miss') ? false:true;
+    if (ok_or_not) {
+      $(this).children(".moya_img").remove();
+    }
   });
+  
 });
 
