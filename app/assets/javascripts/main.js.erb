@@ -1,11 +1,14 @@
 function submit(){
   var correct = [2,3,4,5,6,7];
+  var count_flag = 0;
   $(".q-area").each(function(index,elements){
     var answer = $(elements).children(".question").children(".answer_form").val()
-    if (correct[index] != answer) {
+    if (correct[index] != answer || count_flag > 0) {
       console.log(answer);
       $(elements).append("<img class='moya'>");
-      $(".moya").attr('src',"<%=  image_path('mokumoku.png') %>");
+      $(".moya").attr('src',"<%=  image_path('mokumoku.png') %>"); 
+      count_flag++;
+      if (count_flag > 2) {return false;}
     }
   });
   
