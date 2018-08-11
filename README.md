@@ -1,21 +1,24 @@
-# インターンで学ぶこと
-## product development
-- skill 
+# README
 
-- team 
-  - communication
-- process
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-# Theme
-その一人に向き合い世の中の課題を解決するプロダクトを開発せよ
+Things you may want to cover:
 
-f_team thema
+* Ruby version
 
-# 評価指標
-## Plan
-## Technology
-## Possibility
+* System dependencies
 
+* Configuration
 
+* Database creation
 
-  
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
