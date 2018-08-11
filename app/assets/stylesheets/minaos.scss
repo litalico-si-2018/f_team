@@ -38,8 +38,8 @@ p{
 /* universal */
 
 body {
-  padding-top: 10px;
-  margin-top: 10px;
+  margin: 0;
+  padding: 0;
   overflow: scroll;
   font-family: "Rounded Mplus 1c";
   background-color: #FFDE99;
@@ -56,6 +56,7 @@ textarea {
 
 .center {
   text-align: center;
+
 }
 
 .center h1 {
@@ -83,10 +84,7 @@ textarea {
       width: 240px;
       font-size: 100%;
       border: none;
-      background-color:transparent;
-      background-repeat: no-repeat;
-      //background-position: top center;
-      background-image: url("inputbox.png");
+      background: transparent url("inputbox.png") no-repeat;
       background-size: cover;
       text-align: center;
     }
@@ -109,7 +107,7 @@ textarea {
     background: #FFF;
     border: solid 3px #6091d3;/*線*/
     border-radius: 10px;/*角の丸み*/
-    font-weight: scroll;
+
 }
 .box2 p {
     margin: 0;
@@ -124,4 +122,18 @@ textarea {
 //result上部のキャラ画像コンテナ
 .character {
 
+}
+
+.resizeimage {
+  min-width: 100vw;
+}
+
+#yokai_appearance_top {
+  display: none;
+ }
+
+#yokai_appearance_bottom {
+  position: absolute;
+  bottom: 0;
+  display: none;
 }
