@@ -1,10 +1,15 @@
 function submit(){
   var correct = [2,3,4,5,6,7];
+  var questions = ["1 + 1 = ","1 + 2 = ","1 + 3 = ","1 + 4 = ","1 + 5 = ","1 + 6 = "];
   var count_flag = 0;
   $(".q-area").each(function(index,elements){
     var answer = $(elements).children(".question").children(".answer_form").val()
     if (correct[index] != answer) {
       $(elements).addClass('miss');
+      if (count_flag == 0) {
+        $("#ok_answer").text(questions[index] + correct[index].toString(10));
+        $("#ng_answer").text(questions[index] + answer.toString(10));
+      }
       count_flag++;
     }
     if (count_flag > 0 && count_flag < 4) {
