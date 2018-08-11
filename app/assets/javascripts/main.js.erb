@@ -1,8 +1,12 @@
 function submit(){
-  var answer = [2,3,4,5,6,7];
-  $(".answer_form").each(function(index,elements){
-    //console.log($(elements).value());
+  var correct = [2,3,4,5,6,7];
+  $(".q-area").each(function(index,elements){
+    var answer = $(elements).children(".question").children(".answer_form").val()
+    if (correct[index] != answer) {
+      console.log(answer);
+      $(elements).append("<img class='moya'>");
+      $(".moya").attr('src',"<%=  image_path('mokumoku.png') %>");
+    }
   });
-  $("#q3").append("<img class='moya'>");
-  $(".moya").attr('src',"<%=  image_path('mokumoku.png') %>");
+  
 }
