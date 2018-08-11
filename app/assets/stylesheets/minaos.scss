@@ -59,10 +59,28 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
-//mainの数字input
-input {
-font-size: 100%;
+.q-area{
+  margin: auto;
+  height: 200px;
+  width: 600px;
+  position: relative;
+  img{
+    margin-top: -35px;
+    margin-left: -55px;
+  }
+  .question{
+    position: absolute;
+    font-size: 120px;
+    //mainの数字input
+    input {
+      width: 100px;
+    font-size: 100%;
+    }
+  }
+
 }
+
+
 
 
 //resultのbox
