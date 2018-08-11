@@ -15,12 +15,18 @@ function submit(){
     }
   });
   
+  
 }
 $(document).ready(function(){
   $(document).on('click','.moya', function(){
     var ok_or_not = $(this).hasClass('miss') ? false:true;
     if (ok_or_not) {
+      if ($(".moya").length === 3) {
+        $(".moya").modaal({content_source: '#modal'});
+      }
       $(this).children(".moya_img").remove();
+      $(this).removeClass("moya");
+      
     }
   });
   
