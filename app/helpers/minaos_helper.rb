@@ -1,0 +1,2 @@
+module MinaosHelper
+end
