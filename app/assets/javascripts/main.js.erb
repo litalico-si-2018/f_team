@@ -1,4 +1,8 @@
 function submit(){
-  $("#q2").append("<img>")
-  $("img").attr('src',"<%=  image_path('mokumoku.png') %>")
+  var answer = [2,3,4,5,6,7];
+  $(".answer_form").each(function(index,elements){
+    //console.log($(elements).value());
+  });
+  $("#q3").append("<img class='moya'>");
+  $(".moya").attr('src',"<%=  image_path('mokumoku.png') %>");
 }
