@@ -6,12 +6,18 @@
     background: #FFF8C5;
     border: solid 3px #000000;/*線*/
     border-radius: 10px;/*角の丸み*/
-    font-weight: scroll;
+    font-size: 10vw;
+    text-align: center;
 }
 .character{
   img{
     width: 100%;
   }
+}
+.score{
+  font-size: 30vw;
+  margin-bottom: 0px;
+  text-align: center;
 }
 .finish-button{
   img{
