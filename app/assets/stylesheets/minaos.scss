@@ -39,8 +39,9 @@ p{
 
 body {
   padding-top: 10px;
-  margin-top: 10;
+  margin-top: 10px;
   overflow: scroll;
+  font-family: "Rounded Mplus 1c";
 }
 
 section {
@@ -69,6 +70,7 @@ textarea {
     margin-left: -55px;
   }
   .question{
+    font-weight: 700; /* bold */
     position: absolute;
     font-size: 120px;
     //mainの数字input
