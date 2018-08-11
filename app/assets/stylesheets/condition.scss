@@ -7,7 +7,7 @@ body {
   display: flex; /* 要素をflexboxに対応させる */
    align-items: center; /* 縦方向の中央揃え */
    justify-content: center; /* 横方向の中央揃え */
-  width: 100%;
+  img {width: 100%;}
 
 }
 
@@ -15,12 +15,17 @@ body {
   display: flex; /* 要素をflexboxに対応させる */
    align-items: center; /* 縦方向の中央揃え */
    justify-content: center; /* 横方向の中央揃え */
-  width: 100%;
+  img {width: 100%;}
 }
 
 .start{
   display: flex; /* 要素をflexboxに対応させる */
    align-items: center; /* 縦方向の中央揃え */
    justify-content: center; /* 横方向の中央揃え */
-  width: 100%;
+   img {width: 100%;}
+}
+
+.emotion-area{
+  display: flex;
+
 }
