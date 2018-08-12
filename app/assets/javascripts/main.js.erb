@@ -11,6 +11,8 @@ function submit(){
         $("#ng_answer").text(questions[index] + answer.toString(10));
       }
       count_flag++;
+    }else{
+      $(elements).addClass('ok');
     }
     if (count_flag > 0 && count_flag < 4) {
       $(elements).addClass('moya');
@@ -23,16 +25,23 @@ function submit(){
   
 }
 $(document).ready(function(){
+  //モヤがついているところをクリックした際の処理
   $(document).on('click','.moya', function(){
     var ok_or_not = $(this).hasClass('miss') ? false:true;
+    if ($(".moya").length === 3) {
+      $(".moya.ok").modaal({content_source: '#modal'});
+    }
     if (ok_or_not) {
-      if ($(".moya").length === 3) {
-        $(".moya").modaal({content_source: '#modal'});
-      }
       $(this).children(".moya_img").remove();
       $(this).removeClass("moya");
-      
     }
+  });
+  $(document).on('click','#ng_answer', function(){
+    $(this).text("1 + 1 = 8");
+  });
+  $(document).on('click','#ok_answer', function(){
+    console.log("test");
+    $(".ok").modaal('close');
   });
   
 });
