@@ -34,7 +34,7 @@ function submit(){
 
   });
 
-  $("#yokai_appearance_bottom").slideDown();
+    $("#yokai_appearance_bottom").slideDown();
   $("#yokai_appearance_top").slideDown();
 }
 
@@ -70,7 +70,7 @@ $(document).ready(function(){
       $(this).children(".moya_img").remove();
       $(this).removeClass("moya");
     }else{
-      $(".information").text("ただしいとおもう答えをいれてみよう！")
+        $(".information").text("ただしいとおもう答えをいれてみよう！")
     }
   });
   
@@ -88,7 +88,8 @@ $(document).ready(function(){
     var answer = $(this).val()
     var index = parseInt($(this).parent().parent().attr('id'),10);
     if (correct[index] == answer) {
-      $(this).append("<div style='position: absolute'>test</div>")
+        $(".information").text("これでできたとおもったら「できた！」ボタンをおそう！")
+        $("#yokai_appearance_bottom").slideUp();
       $(".moya_img").remove();
       $(".moya").removeClass('moya');
     }
