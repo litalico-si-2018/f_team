@@ -1,0 +1,30 @@
+.box2 {
+    padding: 1em 0em;
+    margin: 0.5em 0;
+    font-weight: bold;
+    color: #000000;/*文字色*/
+    background: #7FCCE3;
+    border: solid 3px #000000;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    font-size: 10vw;
+    text-align: center;
+}
+.character{
+  img{
+    width: 100%;
+  }
+}
+.score{
+  font-size: 30vw;
+  text-align: center;
+}
+.finish-button{
+  img{
+    width: 100%;
+  }
+}
+.result-button{
+  img{
+    width: 100%;
+  }
+}
