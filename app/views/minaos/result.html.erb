@@ -1,2 +1,42 @@
-<h1>Minaos#result</h1>
-<p>Find me in app/views/minaos/result.html.erb</p>
+<div class="score">
+   <%=@point%>点
+ </div>
+ <div class="character">
+   <%= image_tag "finpic.png" %>
+ </div>
+  <!--<h2>すげーじゃん！</h2> -->
+ <!-- コメント -->
+  <div class="box2">
+    <div id="q1">
+      1 + 1 = 2
+      <%= image_tag "maru.png" %>
+    </div>
+    <div id="q2">
+      1 + 2 = 3
+      <%= image_tag "maru.png" %>
+    </div>
+    <div id="q3">
+  1 + 3 = 4
+  <%= image_tag "maru.png" %>
+  <%= image_tag "youkai.png" %>
+</div>
+<div id="q4">
+  1 + 4 = 5
+  <%= image_tag "maru.png" %>
+</div>
+<div id="q5">
+  1 + 5 = 6
+  <%= image_tag "maru.png" %>
+</div>
+<div id="q6">
+  1 + 6 = 7
+  <%= image_tag "maru.png" %>
+</div>
+</div>
+
+<div class = "result-button" >
+  <%= link_to image_tag("retry.png"), root_path%>
+</div>
+<div class="finish-button">
+  <%= link_to image_tag("finish.png"), condition_path%>
+</div>

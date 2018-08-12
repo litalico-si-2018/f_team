@@ -2,17 +2,17 @@ require 'test_helper'
 
 class MinaosControllerTest < ActionDispatch::IntegrationTest
   test "should get check_condition" do
-    get minaos_check_condition_url
+    get condition_path
     assert_response :success
   end
 
   test "should get main" do
-    get minaos_main_url
+    get main_path
     assert_response :success
   end
 
   test "should get result" do
-    get minaos_result_url
+    get result_path
     assert_response :success
   end
 
