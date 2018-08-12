@@ -22,6 +22,7 @@ function submit(){
       if (count_flag == 0) {
         $("#ok_answer").text(questions[index] + correct[index].toString(10));
         $("#ng_answer").text(questions[index] + answer.toString(10));
+        $('input:hidden[name="index"]').val(index);
       }
       count_flag++;
     }
@@ -59,10 +60,14 @@ $(document).ready(function(){
   var correct = [2,3,4,5,6,7];
   
   //モヤがついているところをクリックした際の処理
+  
   $(document).on('click','.moya', function(){
     
-    if ($(".moya").length === 3) {
-      $(".moya.ok").modaal({content_source: '#modal'});
+    if ($(".moya").length === 2) {
+      $(".moya.ok").modaal({
+        start_open: true,
+        content_source: '#modal'});
+      console.log("test");
     }
     
     var ok_or_not = $(this).hasClass('miss') ? false:true;
@@ -79,8 +84,14 @@ $(document).ready(function(){
   });
   
   $(document).on('click','#ok_answer', function(){
-    console.log("test");
+    var index = parseInt($('input:hidden[name="index"]').val(),10);
+    $('#'+index+' .answer_form').val(correct[index]);
+    $(".information").text("これでできたとおもったら「できた！」ボタンをおそう！")
+    $("#yokai_appearance_bottom").slideUp();
     $(".ok").modaal('close');
+    $(".moya_img").remove();
+      $(".moya").removeClass('moya');
+      $(".main-button").addClass("can-submit");
   });
   
   //モヤが掛かっている & miss の時、inputの変更
