@@ -4,18 +4,21 @@ max-width:80%;
 margin: 0 auto;
 height:600px;
 padding:5px;
+padding-left: 100px;
 border-radius: 10px;
 background-color:#FFEECC;
 color:#000;
 font-size:11vw;
-text-align: center;
+text-align: left;
 img{
+  padding-top: 10px;
   width:10%;
 }
 }
 .character{
   img{
     width: 100%;
+    margin: 0 auto;
   }
 }
 .score{
