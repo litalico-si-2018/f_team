@@ -8,6 +8,13 @@ function submit(){
   var answer_rate = make_answer_rate(correct);
   console.log(answer_rate);
   
+  //urlを環境によって変える
+  var url = "http://localhost:3000/result?answer_rate=";
+  if (answer_rate == 1) {
+    window.location.href = url+answer_rate;
+    return true;
+  }
+  
   //回答によって
   $(".q-area").each(function(index,elements){
     var answer = $(elements).children(".question").children(".answer_form").val()
