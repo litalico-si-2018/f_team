@@ -10,7 +10,7 @@ function submit(){
   
   //urlを環境によって変える
   var url = "http://localhost:3000/result?answer_rate=";
-  if (answer_rate == 1) {
+  if (answer_rate == 1 || $(".main-button").hasClass("can-submit")) {
     window.location.href = url+answer_rate;
     return true;
   }
@@ -92,6 +92,7 @@ $(document).ready(function(){
         $("#yokai_appearance_bottom").slideUp();
       $(".moya_img").remove();
       $(".moya").removeClass('moya');
+      $(".main-button").addClass("can-submit");
     }
   });
   
