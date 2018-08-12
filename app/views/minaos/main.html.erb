@@ -40,9 +40,13 @@
 
 
    <div class="main-button" onClick="submit()"> <%= image_submit_tag "dekita.png" %> </div>
-
 </center>
+
+<div id="modal" style="display: none">
+  <div>どっちがせいかいかな？えらんでみよう！</div>
+  <div id="ok_answer" class="question"></div>
+  <div id="ng_answer" class="question"></div>
+</div>
 <footer></footer>
 
 <%= image_tag "yokai_appearance_bottom.png", class: "resizeimage", id: "yokai_appearance_bottom" %>
-
