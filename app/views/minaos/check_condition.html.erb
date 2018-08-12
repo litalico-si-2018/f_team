@@ -6,13 +6,17 @@
 </div>
 
 <div class = "face-condition">
-  <div class="face-pattern"><%= image_tag "usamaru1.jpeg" %></div>
-  <div class="face-pattern"><%= image_tag "usamaru2.jpeg" %></div>
-  <div class="face-pattern"><%= image_tag "usamaru3.jpeg" %></div>
+  　
+     <div class="face-pattern" onclick="Click_Sub()">
+       <%= link_to '#' do%><%= image_tag "condition1.png"  %><% end %></div>
+     <div class="face-pattern" onclick="Click_Sub()">
+       <%= link_to '#' do%><%= image_tag "condition2.png" %><% end %></div>
+     <div class="face-pattern" onclick="Click_Sub()">
+       <%= link_to '#' do%><%= image_tag "condition2.png" %><% end %></div>
 </div>
 
 
-<div class = "start">
-  <%= image_tag "start.png" %>
+<div class = "start" id="start">
+  <%= link_to image_tag("start.png"), root_path%>
 
 </div>
