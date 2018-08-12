@@ -38,9 +38,11 @@ p{
 /* universal */
 
 body {
-  padding-top: 10px;
-  margin-top: 10;
+  margin: 0;
+  padding: 0;
   overflow: scroll;
+  font-family: "Rounded Mplus 1c";
+  background-color: #FFDE99;
 }
 
 section {
@@ -54,6 +56,7 @@ textarea {
 
 .center {
   text-align: center;
+
 }
 
 .center h1 {
@@ -62,19 +65,32 @@ textarea {
 .q-area{
   margin: auto;
   height: 200px;
-  width: 600px;
+  width: 750px;
   position: relative;
-  img{
+  .moya_img{
     margin-top: -35px;
     margin-left: -55px;
+    z-index: -1;
   }
   .question{
+    font-weight: 700; /* bold */
     position: absolute;
     font-size: 120px;
     //mainの数字input
     .answer_form {
-      width: 100px;
-    font-size: 100%;
+      font-family: "Rounded Mplus 1c";
+      font-weight: 700; /* bold */
+
+      margin-left: 40px;
+      width: 240px;
+      font-size: 100%;
+      border: none;
+      background: transparent url("inputbox.png") no-repeat;
+      background-size: cover;
+      text-align: center;
+    }
+    .answer_form:focus {
+      background-image: url("focuced_inputbox.png");
     }
   }
 
@@ -92,7 +108,7 @@ textarea {
     background: #FFF;
     border: solid 3px #6091d3;/*線*/
     border-radius: 10px;/*角の丸み*/
-    font-weight: scroll;
+
 }
 .box2 p {
     margin: 0;
@@ -107,4 +123,30 @@ textarea {
 //result上部のキャラ画像コンテナ
 .character {
 
+}
+
+.resizeimage {
+  min-width: 100vw;
+}
+
+#yokai_appearance_top {
+  display: none;
+  position: fixed;
+  z-index: 1;
+ }
+
+#yokai_appearance_bottom {
+  position: fixed;
+  bottom: 0;
+  display: none;
+  z-index: 1;
+}
+
+
+footer {
+  height: 380px;
+  //background-color: #F70841;
+  position: absolute;/*wrapperの基準の絶対配置*/
+  //bottom: 0; /*一番下に配置*/
+  width: 100%;
 }
