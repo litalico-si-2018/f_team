@@ -1,0 +1,40 @@
+
+body {
+  background-color: #FFDE99;
+}
+//condition のコンテナ
+.container {
+  display: flex; /* 要素をflexboxに対応させる */
+   align-items: center; /* 縦方向の中央揃え */
+   justify-content: center; /* 横方向の中央揃え */
+  img {width: 100%;}
+
+}
+
+.ask_condition{
+  display: flex; /* 要素をflexboxに対応させる */
+   align-items: center; /* 縦方向の中央揃え */
+   justify-content: center; /* 横方向の中央揃え */
+  img {width: 100%;}
+}
+
+.start{
+  display: none;
+  // display: flex; /* 要素をflexboxに対応させる */
+   align-items: center; /* 縦方向の中央揃え */
+   justify-content: center; /* 横方向の中央揃え */
+   padding-top: 50px;
+   img {width: 100%;}
+}
+
+.face-condition {
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   padding-top: 50px;
+   img {width: 100%;
+   background-color: #FFDE99;}
+
+
+
+}

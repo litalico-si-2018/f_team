@@ -1,0 +1,83 @@
+//submit押した時
+function submit(){
+  var correct = [2,3,4,5,6,7];
+  var questions = ["1 + 1 = ","1 + 2 = ","1 + 3 = ","1 + 4 = ","1 + 5 = ","1 + 6 = "];
+  var count_flag = 0;
+  
+  //正答率、ラベリングと遷移
+  var answer_rate = make_answer_rate(correct);
+  console.log(answer_rate);
+  
+  //urlを環境によって変える
+  var url = "http://localhost:3000/result?answer_rate=";
+  if (answer_rate == 1) {
+    window.location.href = url+answer_rate;
+    return true;
+  }
+  
+  //間違ったところとその下２つにモヤを出す
+  $(".q-area").each(function(index,elements){
+    var answer = $(elements).children(".question").children(".answer_form").val()
+    if (correct[index] != answer) {
+      if (count_flag == 0) {
+        $("#ok_answer").text(questions[index] + correct[index].toString(10));
+        $("#ng_answer").text(questions[index] + answer.toString(10));
+      }
+      count_flag++;
+    }
+    if (count_flag > 0 && count_flag < 4) {
+      $(elements).addClass('moya');
+      $(elements).append("<img class='moya_img'>");
+      $(".moya_img").attr('src',"<%=  image_path('mokumoku.png') %>"); 
+      count_flag++;
+    }
+
+  });
+
+  $("#yokai_appearance_bottom").slideDown();
+  $("#yokai_appearance_top").slideDown();
+}
+
+//正答率算出
+function make_answer_rate(correct){
+  var correct_question_num = 0;
+  $(".q-area").each(function(index,elements){
+    
+    var answer = $(elements).children(".question").children(".answer_form").val()
+    if (correct[index] != answer) {
+      $(elements).addClass('miss');
+    }else{
+      $(elements).addClass('ok');
+      correct_question_num++;
+    }
+  });
+  return correct_question_num/6;
+  
+}
+
+$(document).ready(function(){
+  //モヤがついているところをクリックした際の処理
+  $(document).on('click','.moya', function(){
+    
+    if ($(".moya").length === 3) {
+      $(".moya.ok").modaal({content_source: '#modal'});
+    }
+    
+    var ok_or_not = $(this).hasClass('miss') ? false:true;
+    if (ok_or_not) {
+      $(this).children(".moya_img").remove();
+      $(this).removeClass("moya");
+    }else{
+      $(this).append("<div style='position: absolute'>test</div>");
+    }
+  });
+  $(document).on('click','#ng_answer', function(){
+    $(this).text("1 + 1 = 8");
+  });
+  $(document).on('click','#ok_answer', function(){
+    console.log("test");
+    $(".ok").modaal('close');
+  });
+  
+});
+

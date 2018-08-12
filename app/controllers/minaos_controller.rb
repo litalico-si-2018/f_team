@@ -6,5 +6,6 @@ class MinaosController < ApplicationController
   end
 
   def result
+    @point = (params[:answer_rate].to_f*100).round
   end
 end
