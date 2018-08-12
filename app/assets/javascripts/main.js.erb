@@ -20,9 +20,11 @@ function submit(){
       $(".moya_img").attr('src',"<%=  image_path('mokumoku.png') %>"); 
       count_flag++;
     }
+
   });
-  
-  
+
+    $("#yokai_appearance_bottom").slideDown();
+    $("#yokai_appearance_top").slideDown();
 }
 $(document).ready(function(){
   //モヤがついているところをクリックした際の処理
