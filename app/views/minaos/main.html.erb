@@ -1,13 +1,55 @@
-<class align = "center">
-<h1>MiNAOS</h1>
- <body>
+<div id="yokai_appearance_top">
+<%= image_tag "yokai_appearance_top.png", class: "resizeimage" %>
+<span class="information">なおせるところをタップしてみよう！</span>
+</div>
 
- <h2>
-   1 + 1 =<br><br>
-   1 + 2 =<br><br>
-   1 + 3 =<br><br>
-   1 + 4 =<br><br>
-   1 + 5 =<br><br>
-   1 + 6 =<br><br>
- </h2>
-</body>
+<center>
+  <%= image_tag "header1.png" %>
+
+
+  <div class="question_container">
+   <div class="q-area" id="0">
+     <div class="question">
+         1 + 1 =<input class="answer_form" type="number" size="2" pattern="\d*">
+     </div>
+   </div>
+   <div class="q-area" id="1">
+    <div class="question">
+      1 + 2 =<input class="answer_form" type="number" size="2" pattern="\d*">
+    </div>
+   </div>
+   <div class="q-area" id="2">
+     <div class="question">
+         1 + 3 =<input class="answer_form" type="number" size="2" pattern="\d*">
+     </div>
+   </div>
+   <div class="q-area" id="3">
+    <div class="question">
+         1 + 4 =<input class="answer_form" type="number" size="2" pattern="\d*">
+    </div>
+   </div>
+   <div class="q-area" id="4">
+     <div class="question">
+         1 + 5 =<input class="answer_form" type="number" size="2" pattern="\d*">
+     </div>
+   </div>
+   <div class="q-area" id="5">
+      <div class="question">
+         1 + 6 =<input class="answer_form" type="number" size="2" pattern="\d*">
+      </div>
+   </div>
+  </div>
+
+
+
+   <div class="main-button" onClick="submit()"> <%= image_submit_tag "dekita.png" %> </div>
+</center>
+
+<div id="modal" style="display: none">
+  <div class="modal_text">どっちがせいかいかな？<br>えらんでみよう！</div>
+  <div id="ok_answer" class="question"></div>
+  <div id="ng_answer" class="question"></div>
+</div>
+<footer></footer>
+
+<%= image_tag "yokai_appearance_bottom.png", class: "resizeimage", id: "yokai_appearance_bottom" %>
