@@ -34,5 +34,9 @@
 </div>
 </div>
 
-<div class="result-button"> <%= image_tag "retry.png"  %> </div>
-<div class="finish-button"> <%= image_tag "finish.png" %> </div>
+<div class = "result-button" >
+  <%= link_to image_tag("retry.png"), root_path%>
+</div>
+<div class="finish-button">
+  <%= link_to image_tag("finish.png"), condition_path%>
+</div>
