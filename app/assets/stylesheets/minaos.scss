@@ -67,9 +67,10 @@ textarea {
   height: 200px;
   width: 750px;
   position: relative;
-  img{
+  .moya_img{
     margin-top: -35px;
     margin-left: -55px;
+    z-index: -1;
   }
   .question{
     font-weight: 700; /* bold */
