@@ -1,31 +1,38 @@
- <div class="character">
-   <%= image_tag "youkai.png" %>
+<div class="score">
+   <%=@point%>点
  </div>
-  <h1>点</h1>
-  <h2>すげーじゃん！</h2>
-
+ <div class="character">
+   <%= image_tag "finpic.png" %>
+ </div>
+  <!--<h2>すげーじゃん！</h2> -->
+ <!-- コメント -->
   <div class="box2">
-  　<h2>
     <div id="q1">
-  　　1 + 1 = <br><br>
-  　</div>
-　  <div id="q3">
-  　　1 + 2 =<br><br>
-　  </div>
-　  <div id="q3">
-  　　1 + 3 =<br><br>
-  　</div>
-  　<div id="q4">
-　　  1 + 4 =<br><br>
-　  </div>
-　  <div id="q5">
-  　　1 + 5 =<br><br>
-  　</div>
-  　<div id="q6">
-　　  1 + 6 =<br><br>
-　  </div>
-　　</h2> 
-　 </div>
+      1 + 1 = 2
+      <%= image_tag "maru.png" %>
+    </div>
+    <div id="q2">
+      1 + 2 = 3
+      <%= image_tag "maru.png" %>
+    </div>
+    <div id="q3">
+  1 + 3 = 4
+  <%= image_tag "maru.png" %>
+  <%= image_tag "youkai.png" %>
+</div>
+<div id="q4">
+  1 + 4 = 5
+  <%= image_tag "maru.png" %>
+</div>
+<div id="q5">
+  1 + 5 = 6
+  <%= image_tag "maru.png" %>
+</div>
+<div id="q6">
+  1 + 6 = 7
+  <%= image_tag "maru.png" %>
+</div>
+</div>
 
-<div class="result-button"> <%= image_submit_tag "youkai.png" %> </div>
-<div class="result-button"> <%= image_submit_tag "youkai.png" %> </div>
+<div class="result-button"> <%= image_tag "retry.png"  %> </div>
+<div class="finish-button"> <%= image_tag "finish.png" %> </div>
