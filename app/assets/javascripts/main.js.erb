@@ -34,7 +34,7 @@ function submit(){
 
   });
 
-  $("#yokai_appearance_bottom").slideDown();
+    $("#yokai_appearance_bottom").slideDown();
   $("#yokai_appearance_top").slideDown();
 }
 
@@ -56,6 +56,8 @@ function make_answer_rate(correct){
 }
 
 $(document).ready(function(){
+  var correct = [2,3,4,5,6,7];
+  
   //モヤがついているところをクリックした際の処理
   $(document).on('click','.moya', function(){
     
@@ -68,15 +70,29 @@ $(document).ready(function(){
       $(this).children(".moya_img").remove();
       $(this).removeClass("moya");
     }else{
-      $(this).append("<div style='position: absolute'>test</div>");
+        $(".information").text("ただしいとおもう答えをいれてみよう！")
     }
   });
+  
   $(document).on('click','#ng_answer', function(){
     $(this).text("1 + 1 = 8");
   });
+  
   $(document).on('click','#ok_answer', function(){
     console.log("test");
     $(".ok").modaal('close');
+  });
+  
+  //モヤが掛かっている & miss の時、inputの変更
+  $(document).on('keyup','.moya.miss .answer_form', function(){
+    var answer = $(this).val()
+    var index = parseInt($(this).parent().parent().attr('id'),10);
+    if (correct[index] == answer) {
+        $(".information").text("これでできたとおもったら「できた！」ボタンをおそう！")
+        $("#yokai_appearance_bottom").slideUp();
+      $(".moya_img").remove();
+      $(".moya").removeClass('moya');
+    }
   });
   
 });
